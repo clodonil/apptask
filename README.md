@@ -4,7 +4,7 @@ Estamos começando uma jornada que muitos desenvolvedores estão passando ou vã
 
 Separamos a evolução em episódios para tornar mais didática e mais simples o entendimento do desenvolvimento.
 
-Se você é um profissional de DevOps mais voltado para Operacão e não tem interesse nas etadas de desenvolvimento, pode começar do [Eposódio 8 - CodeDeploy - AWS](ep4.md) em diante.
+> Se você é um profissional de DevOps mais voltado para Operacão e não tem interesse nas etadas de desenvolvimento, pode começar do [Eposódio 8 - CodeDeploy - AWS](ep4.md) em diante.
 
 [1. Episódio - Visão geral do projeto](ep1.md)
 
