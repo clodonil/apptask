@@ -171,6 +171,7 @@ Vamos começar pelo arquivo principal, que chamado de controller.
   ```
 
 - *`config.py`*
+  
   O arquivo `config.py` é importado pelo arquivo de controler `app/__init__.py` e nele contém algumas variáveis.
 
 
