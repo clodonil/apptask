@@ -10,20 +10,20 @@ Separamos a evolução em episódios para tornar mais didática e mais simples o
 
 [2. Episódio - Database](ep2.md)
 
-[3. Eposódio - Estruturação do Aplicativo](ep3.md)
+[3. Episódio - Criando a primeira interface](ep3.md)
 
-[4. Eposódio - Estruturação do Aplicativo](ep4.md)
+[4. Episódio - Estruturação do Aplicativo](ep4.md)
 
-[5. Eposódio - Templates](ep4.md)
+[5. Episódio - Templates](ep4.md)
 
-[6. Eposódio - Criação da Tela de Tasks](ep5.md)
+[6. Episódio - Criação da Tela de Tasks](ep5.md)
 
-[7. Eposódio - Permissão e Acessos](ep4.md)
+[7. Episódio - Permissão e Acessos](ep4.md)
 
-[8. Eposódio - CodeDeploy - AWS](ep4.md)
+[8. Episódio - CodeDeploy - AWS](ep4.md)
 
-[9. Eposódio - Estratégias de Deploy - AWS](ep4.md)
+[9. Episódio - Estratégias de Deploy - AWS](ep4.md)
 
 [10. Episódio - Cannaru]()
 
-Espero ter contribuido com o crescimento do seu conhecimento.
+Ao finalizar essa série, espero ter contribuido com o seu crescimento profissional.

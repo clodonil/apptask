@@ -306,4 +306,4 @@ Agora que validamos que está tudo certo com o banco de dados, podemos dizer que
 
 Uffa... tome um café, um suco ou apenas ar e vamos para o próximo.
 
-[3. Eposódio - Estruturação do Aplicativo](ep3.md)
+[3. Episódio - Criando a primeira interface](ep3.md)
