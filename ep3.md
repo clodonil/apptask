@@ -14,7 +14,7 @@ Vamos começar alterando o arquivo [config.py](ep3/config.py) adicionado a vari�
 create_db_token = "macacoloco"
 ```
 
-O próximo arquivo que vamos alterar é o [app/__init__.py](ep3/app/__init__.py). Como o arquivo teve bastante modificação, coloquei o arquivo inteiro. 
+O próximo arquivo que vamos alterar é o [`app/__init__.py`](ep3/app/__init__.py). Como o arquivo teve bastante modificação, coloquei o arquivo inteiro. 
 
 Na execução do aplicação, primeiro verifica se o banco de dados existe.
 
