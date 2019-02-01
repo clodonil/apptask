@@ -222,25 +222,33 @@ Vamos começar pelo arquivo principal, que chamado de controller.
 
 - *`Dockerfile`*
 
-E por último temos o Dockerfile para criação da imagem.
-```
-# Vamos utilizar uma imagem base do linux ubuntu
-FROM ubuntu:latest
-# Definimos o dono da imagem
-MAINTAINER Clodonil Trigo "clodonil@nisled.org"
-# Atualizamos a imagem
-RUN apt-get update -y
-# Instalamos o Python
-RUN apt-get install -y python-pip python-dev build-essential
-# Copiamos os arquivos do projeto para dentro da pasta apptask do containner.
-COPY . /apptask
-# Definimos o diretorio /apptask como o principal
-WORKDIR /apptask
-# Instalamos a dependencia do projeto
-RUN pip install -r requirements
-# Definimos Python como executor de comando
-ENTRYPOINT ["python"]
-```
+  E por último temos o Dockerfile para criação da imagem.
+  
+  ```Dockerfile
+  # Vamos utilizar uma imagem base do linux ubuntu
+  FROM ubuntu:latest
+  
+  # Definimos o dono da imagem
+  MAINTAINER Clodonil Trigo "clodonil@nisled.org"
+  
+  # Atualizamos a imagem
+  RUN apt-get update -y
+  
+  # Instalamos o Python
+  RUN apt-get install -y python-pip python-dev build-essential
+  
+  # Copiamos os arquivos do projeto para dentro da pasta apptask do containner.
+  COPY . /apptask
+  
+  # Definimos o diretorio /apptask como o principal
+  WORKDIR /apptask
+  
+  # Instalamos a dependencia do projeto
+  RUN pip install -r requirements
+  
+  # Definimos Python como executor de comando
+  ENTRYPOINT ["python"]
+  ```
 Com tudo criado, podemos agora construir a imagem docker e assim poder validar o que fizemos até aqui.
 
 Realizando o build da image apptask:latest:
