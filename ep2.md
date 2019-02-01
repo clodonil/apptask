@@ -60,7 +60,10 @@ Vamos começar pelo arquivo principal, que chamado de controller.
 - *`app/model/__init__py`*
   
   Esse é o maior arquivo que vamos ter no projeto, portanto ao dominar esse arquivo o restante do projeto vai ser tranquilo.
-  Apesar desse arquivo sem grande, é bastante simples. Em uma visão geral ele declara duas `class` que serão duas tabelas do banco de dados, em cada `class` declara os atributos que são os registro do banco de dados e os métodos que estaremos realizando com essa tabela, tais como adicionar registro, deletar registro, alterar registro.
+  Apesar desse arquivo sem grande, é bastante simples. 
+  
+  Em uma visão geral ele declara duas `class` que serão duas tabelas do banco de dados, em cada `class` declara os atributos que são os registro do banco de dados e os métodos que estaremos realizando com essa tabela, tais como adicionar registro, deletar registro, alterar registro.
+
   Toda a mágina da transformação desse código em tabela no banco de dados fica com conta da lib `SQLAlchemy`.
 
   ```python
