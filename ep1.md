@@ -1,4 +1,4 @@
-# Episódio 1 - Visão geral do projeto
+# 1. Episódio - Visão geral do projeto
 
 Vamos começar a nossa jornada com aplicação que será utilizada como base. Vamos desenvolver um aplicativo bem simples que registra as tarefas que devem ser executadas por uma pessoa.
 
@@ -31,7 +31,7 @@ CMD ["run.py"]
 ```
 Não se preocupe com o Dockerfile agora, vamos trabalhar dele em cada episódio.
 
-Então vamos começar.
+Finalizamos esse primeiro episódio apenas o projeto, agora vamos entrar em código Hands-on.
 
-[Episódio 2 - Database](ep2.md)
+[2. Episódio - Database](ep2.md)
 

@@ -1,4 +1,4 @@
-# Episódio 2 - Database
+# 2. Episódio - Database
 
 Ao final desse episódio devemos ter um banco de dados criado e estruturado.Para chegarmos esse objetivo, vamos percorrer um curto caminho, mais com bastante informação.
 
@@ -306,4 +306,4 @@ Agora que validamos que está tudo certo com o banco de dados, podemos dizer que
 
 Uffa... tome um café, um suco ou apenas ar e vamos para o próximo.
 
-[Eposódio 3 - Estruturação do Aplicativo](ep3.md)
+[3. Eposódio - Estruturação do Aplicativo](ep3.md)
