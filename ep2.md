@@ -185,11 +185,14 @@ Vamos começar pelo arquivo principal, que chamado de controller.
     
     # Define o diretorio base como sendo do projeto. Essa informação é util para criar o banco de         dadosdentro do diretório db.
     basedir = os.path.abspath(os.path.dirname(__file__))
+    
     # Define que o diretorio do banco de dados vai ser o db e o nome do banco de dados vai ser         obanco_de_dados.db   
     database = os.path.join(basedir, 'db/banco_de_dados.db')
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + database
+    
     # Nesse projeto nao vamos controlar o versionamento do banco de dado, portanto podemos desligar oTRACK         de modificacao.
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+    
     # Esses 3 ultimas variáveis são utilizado pelo arquivo run.py e sao basicamente para definir se odebug         vai estar habilitado, isso é bom para o desenvolvimento. Também define a porta da aplicacao eo IP do         host.
     DEBUG = True
     PORT = 8080
