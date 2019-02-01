@@ -1,5 +1,5 @@
 import os
-from flask import Flask, Blueprint, redirect,url_for,request, render_template
+from flask import Flask, flash,Blueprint, redirect,url_for,request, render_template
 from flask.ext.sqlalchemy import SQLAlchemy
 from config import database, create_db_token
 
@@ -20,11 +20,15 @@ def index():
           get_token = request.form['token']
           if create_db_token == get_token:
              db.create_all()
-             return "<h1>Database criado com sucesso.</h1>"
+             flash('Database criado com sucesso')
+             return redirect(url_for('login.auth'))
           else:
-             return "<h1> Token para criacao do token nao confere </h1>"
+             flash("Token invalido, digite para criacao do token nao confere!!!")
+             return render_template('settings.html')
        elif request.method == "GET":
           return render_template('settings.html')    
+    else:
+      return redirect(url_for('login.auth'))
 
 # Modulos
 from app import model

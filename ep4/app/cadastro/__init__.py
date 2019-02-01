@@ -8,14 +8,15 @@ cadastro = Blueprint('cadastro',__name__)
 
 @cadastro.route('/index', methods=['GET','POST'])
 @cadastro.route('/', methods=['GET','POST'])
-def create_people():
+def create():
     if request.method == "POST":
          email = request.form['email']
          senha = request.form['senha']
 
          user = People(email,senha)
          if user.add(user):
-            return "<h1>Usuario criado com sucesso.</h1>"
+            flash('Cadastro realizado com sucesso')
+            return redirect(url_for('login.auth'))
          else:    
             return "<h1>falha ao criar usuario.</h1>"
     elif request.method == "GET":

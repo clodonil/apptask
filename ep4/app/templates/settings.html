@@ -2,6 +2,15 @@
     <title>Criando a database</title>
     <body>
         <h1><center> Primeiro Acesso: Criando Banco de Dados  </center></h1>
+        {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
         <span>
             <form action="" method="post">
                 <label> Token: </label>
