@@ -6,21 +6,21 @@ Só que o nosso banco de dados deve ser criado durante a execução do programa,
 
 Para executarmos esse tarefa com a minima segurança, vamos definir um token no arquivo `config.py` e seo o usuário ao executar a primeira vez aplicação e o banco não existir, só deve permitir criar o banco se o usuário digitar o toke corretamente.
 
-Vamos começar alterando o arquivo `[config.py](ep3/config.py)` adicionado a variável de token com o nome `create_db_token`.
+Vamos começar alterando o arquivo [config.py](ep3/config.py) adicionado a variável de token com o nome `create_db_token`.
 
 ```python
 ....
 ....
-create_db_token = "macaco loco"
+create_db_token = "macacoloco"
 ```
 
-O próximo arquivo que vamos alterar é o `[app/__init__.py](ep3/app/__init__.py)`. Como o arquivo teve bastante modificação, coloquei o arquivo inteiro. 
+O próximo arquivo que vamos alterar é o [app/__init__.py](ep3/app/__init__.py). Como o arquivo teve bastante modificação, coloquei o arquivo inteiro. 
 
 Na execução do aplicação, primeiro verifica se o banco de dados existe.
 
-Se não existir, e o método da chamada é `[GET](https://blog.alura.com.br/diferencas-entre-get-e-post/)`, temos a condição perfeita para abrir o formulário `settings.html` para solicitar o token para criação do banco de dados.
+Se não existir, e o método da chamada é [GET](https://blog.alura.com.br/diferencas-entre-get-e-post/), temos a condição perfeita para abrir o formulário `settings.html` para solicitar o token para criação do banco de dados.
 
-Ao preencher o formulário enviar através do método `[POST](https://blog.alura.com.br/diferencas-entre-get-e-post/)` vai ser verificado o token, se for válido, o banco de dados é criado.
+Ao preencher o formulário enviar através do método [POST](https://blog.alura.com.br/diferencas-entre-get-e-post/) vai ser verificado o token, se for válido, o banco de dados é criado.
 
 Segue o comentário do código para um melhor entendimento.
 
@@ -76,7 +76,7 @@ Agora por último vamos criar o formulário html. Para isso vamos criar um diret
 $ mkdir app/templates
 $ touch app/templates/settings.html
 ```
-O conteúdo do arquivo `[settings.html](ep3/app/templates/settings.html)` é um formulário padrão html.
+O conteúdo do arquivo [settings.html](ep3/app/templates/settings.html) é um formulário padrão html.
 
 ```html
 <html>
@@ -94,7 +94,7 @@ O conteúdo do arquivo `[settings.html](ep3/app/templates/settings.html)` é um 
 </html>
 ```
 
-Fizemos uma alteração básica no arquivo `[Dockerfile](ep3/Dockerfile)` para não entrar diretamente no python, nesse caso vamos precisar de um terminar para ver os logs.
+Fizemos uma alteração básica no arquivo [Dockerfile](ep3/Dockerfile) para não entrar diretamente no python, nesse caso vamos precisar de um terminar para ver os logs.
 
 
 Agora a nossa aplicação já tem uma interface web para a criação do banco de dados. E como definido no arquivo de `config.py` a porta da aplicação é 8080. Portanto ao executar o docker, precisamos externalizar essa porta.
@@ -123,11 +123,11 @@ python run.py
 
 Na tela1, é solicitado o token definido no arquivo no arquivo `config.py` na variável `create_db_token`. Futuramente vamos melhorar esse método de geração de token.
 
-![form](lab2-img1.png)
+![form](img/ep3-img1.png)
 
 E na tela2, temos o banco de dados criado.
 
-![create_database](lab2-img2.png)
+![create_database](img/ep3-img2.png)
 
 
 Dessa forma finalizamos o episódio 4.
