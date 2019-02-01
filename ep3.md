@@ -132,6 +132,6 @@ E na tela2, temos o banco de dados criado.
 
 Dessa forma finalizamos o episódio 4.
 
-[4. Episódio - Estruturação do Aplicativo](ep4.md)
+[4. Episódio - Registro de Usuário e Login](ep4.md)
 
 

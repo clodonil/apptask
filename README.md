@@ -12,7 +12,7 @@ Separamos a evolução em episódios para tornar mais didática e mais simples o
 
 [3. Episódio - Criando a primeira interface](ep3.md)
 
-[4. Episódio - Estruturação do Aplicativo](ep4.md)
+[4. Episódio - Registro de Usuário e Login](ep4.md)
 
 [5. Episódio - Templates](ep4.md)
 
