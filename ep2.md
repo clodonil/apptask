@@ -10,18 +10,18 @@ Então utilizando essa livre escolha, estruturamos o nosso projeto dessa forma.
 
 No diretório `app` temos todo o código relacionado ao nosso projeto, segue a descrição dos arquivo:
 
-- **__init__.py**: É o arquivo principal do projeto, podemos dizer que esse arquivo é o `controller` do projeto.
-- **model/__init__.py**: Cada diretório dentro da pasta `app` chamamos de módulo e o `model` vai ser o módulo relacionado ao banco de dados. O arquivo `__init__.py` descreve a estrutura do banco de dados.
+- *`__init__.py`*: É o arquivo principal do projeto, podemos dizer que esse arquivo é o `controller` do projeto.
+- *`model/__init__.py`*: Cada diretório dentro da pasta `app` chamamos de módulo e o `model` vai ser o módulo relacionado ao banco de dados. O arquivo `__init__.py` descreve a estrutura do banco de dados.
 
 > Não vamos detalhar linha por linha de programação, deixei o código já documentado, portanto apenas código de fato importante serão detalhados. Caso fique dúvida olhe o código completo.
 
 Os outros arquivos que estão na raiz do projeto, são utilizado para configuração do sistema, vou detalhar cada um deles.
 
-- **config.py**: Utilizado para armazenar as variáveis do sistemas. 
-- **Dockerfile**: Utilizado construir a imagem docker
-- **requirements**: Arquivo que contém as dependência do nosso sistema;
-- **run.py**: Utilizado para inicializar aplicação
-- **db**: Diretório que será armazenado o banco de dados
+- *`config.py`*: Utilizado para armazenar as variáveis do sistemas. 
+- *`Dockerfile`*: Utilizado construir a imagem docker
+- *`requirements`*: Arquivo que contém as dependência do nosso sistema;
+- *`run.py`*: Utilizado para inicializar aplicação
+- *`db`*: Diretório que será armazenado o banco de dados
 
 Agora que temos a nossa estruturação pronta, podemos começar e primeiramente vamos criar a estrutura de diretório e os arquivos conforme descrito.
 
@@ -35,8 +35,9 @@ $ touch app/__init__.py app/model/__init__py
 
 Vamos começar pelo arquivo principal, que chamado de controller.
 
-- **app/__init__.py**
-  Arquivo de controller: 
+- *`app/__init__.py`*
+
+  Arquivo de controller, é o arquivo que orquestra todo o projeto. 
 
   ```python
     # Importamos as bibliotecas do Flask e do banco de dados o SQLALchemy.
@@ -56,7 +57,8 @@ Vamos começar pelo arquivo principal, que chamado de controller.
   ```
   O arquivo é bem pequeno e tranquilo de entender, faz basicamente duas coisas, instância os objetos e importa o módulo das tabelas do banco de dados.
 
-- **app/model/__init__py**
+- *`app/model/__init__py`*
+  
   Esse é o maior arquivo que vamos ter no projeto, portanto ao dominar esse arquivo o restante do projeto vai ser tranquilo.
   Apesar desse arquivo sem grande, é bastante simples. Em uma visão geral ele declara duas `class` que serão duas tabelas do banco de dados, em cada `class` declara os atributos que são os registro do banco de dados e os métodos que estaremos realizando com essa tabela, tais como adicionar registro, deletar registro, alterar registro.
   Toda a mágina da transformação desse código em tabela no banco de dados fica com conta da lib `SQLAlchemy`.
@@ -165,7 +167,7 @@ Vamos começar pelo arquivo principal, que chamado de controller.
     
   ```
 
-- **config.py**
+- *`config.py`*
   O arquivo `config.py` é importado pelo arquivo de controler `app/__init__.py` e nele contém algumas variáveis.
 
 
@@ -189,7 +191,9 @@ Vamos começar pelo arquivo principal, que chamado de controller.
     PORT = 8080
     HOST = "0.0.0.0"
   ```
-- **run.py**
+
+- *`run.py`*
+
   O arquivo `run.py` é start da aplicação. É bastante simples.
 
   ```python
@@ -200,14 +204,17 @@ Vamos começar pelo arquivo principal, que chamado de controller.
     app.run(app.config['HOST'],app.conf['PORT'],app.config['DEBUG'])
 
   ```
-- **requirements**
+
+- *`requirements`*
+  
   Nesse arquivo definimos todas as dependências que o projeto tem. O build da imagem docker utiliza esse arquivo para realizar a instalação.
   ```
    Flask==0.10.1
    Flask-SQLAlchemy==2.3.2
   ```
 
-- **Dockerfile**
+- *`Dockerfile`*
+
 E por último temos o Dockerfile para criação da imagem.
 ```
 # Vamos utilizar uma imagem base do linux ubuntu
@@ -280,4 +287,8 @@ Agora que temos os registros criados, vamos verificar o relacionamento entre as 
 [<Task u'Atividade 1'>]
 ```
 
-Dessa forma finalizamos o laboratório 1.
+Agora que validamos que está tudo certo com o banco de dados, podemos dizer que acabamos o primeiro episódio.
+
+Uffa... tome um café, um suco ou apenas ar e vamos para o próximo.
+
+[Eposódio 3 - Estruturação do Aplicativo](ep3.md)

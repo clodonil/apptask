@@ -12,8 +12,9 @@ A prototipação da aplicação é essa:
 
 Vamos utilizar as seguintes tecnologias para o desenvolvimento:
 
-- Python
-- Flash
+- *Python*:
+- *Flash*:
+- *sqlalchemy*:
 
 Aplicação vai rodar em um containner Docker. Portanto vamos utilizar o seguinte `Dockerfile` durante o projeto.
 
@@ -28,4 +29,9 @@ RUN pip install -r requirements
 ENTRYPOINT ["python"]
 CMD ["run.py"]
 ```
+Não se preocupe com o Dockerfile agora, vamos trabalhar dele em cada episódio.
+
+Então vamos começar.
+
+[Episódio 2 - Database](ep2.md)
 
