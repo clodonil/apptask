@@ -1,0 +1,30 @@
+<html>
+    <title>Criação de Usuário</title>
+    <body>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+              <ul class=flashes>
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+              </ul>
+            {% endif %}
+          {% endwith %}
+          
+        <h1><center> Login </center></h1>
+        <span>
+            <form action="" method="post">
+                 <span>
+                   <label> E-Mail: </label>
+                   <input type="text" name="email">
+                </span>
+                <span>
+                 <label> Senha: </label>
+                 <input type="text" name="senha">
+                </span> 
+		<input type="submit">
+            </form>
+        </span>
+        <a href='../cadastro'> Registro </a>
+    </body>
+</html>

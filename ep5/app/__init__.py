@@ -19,15 +19,16 @@ def index():
        if request.method == "POST":
           get_token = request.form['token']
           if create_db_token == get_token:
-             db.create_all()             
-             return "<center><h1><em>Banco de Dados criado com Sucesso!!!</em></h1></center>"
+             db.create_all()
+             flash('Database criado com sucesso')
+             return redirect(url_for('login.auth'))
           else:
              flash("Token invalido, digite para criacao do token nao confere!!!")
-             return "<center><h1><em>Token invalido, tente novamente!!!</em></h1></center>"
+             return render_template('settings.html')
        elif request.method == "GET":
           return render_template('settings.html')    
     else:
-      return "<center><h1><em>Tela de Login</em></h1></center>"
+      return redirect(url_for('login.auth'))
 
 # Modulos
 from app import model

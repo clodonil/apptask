@@ -18,4 +18,4 @@ DEBUG = True
 PORT = 8080
 HOST = "0.0.0.0"
 
-create_db_token = "macacoloco"
+create_db_token = "jjj"

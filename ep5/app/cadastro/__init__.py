@@ -15,9 +15,10 @@ def create():
 
          user = People(email,senha)
          if user.add(user):
-            return "<center><h1><em>Registro realizado com sucesso!!!</em></h1></center>"
+            flash('Cadastro realizado com sucesso')
+            return redirect(url_for('login.auth'))
          else:    
-            return "<center><h1><em>Falha ao criar a sua conta, tente novamente!!!</em></h1></center>"
+            return "<h1>falha ao criar usuario.</h1>"
     elif request.method == "GET":
         return render_template('cadastro/index.html')    
 
