@@ -2,9 +2,7 @@ from flask import render_template,  Blueprint, request
 from app.model  import People
 
 
-
 cadastro = Blueprint('cadastro',__name__)
-
 
 @cadastro.route('/index', methods=['GET','POST'])
 @cadastro.route('/', methods=['GET','POST'])

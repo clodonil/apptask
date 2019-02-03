@@ -16,18 +16,17 @@ db = SQLAlchemy(app)
 @app.route('/',methods = ["GET","POST"])
 def index():
     if not os.path.exists(database):
-       if request.method == "POST":
+       if request.method == "GET":
+          return render_template('settings.html')    
+       elif request.method == "POST":
           get_token = request.form['token']
           if create_db_token == get_token:
-             db.create_all()             
+             db.create_all()
              return "<center><h1><em>Banco de Dados criado com Sucesso!!!</em></h1></center>"
           else:
-             flash("Token invalido, digite para criacao do token nao confere!!!")
              return "<center><h1><em>Token invalido, tente novamente!!!</em></h1></center>"
-       elif request.method == "GET":
-          return render_template('settings.html')    
-    else:
-      return "<center><h1><em>Tela de Login</em></h1></center>"
+       else:
+          return "<center><h1><em>Tela de Login</em></h1></center>"
 
 # Modulos
 from app import model

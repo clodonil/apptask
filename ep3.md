@@ -61,10 +61,13 @@ def index():
              # Se for igual p banco de dados é criado 
              db.create_all()
              # Mensagem de retorno
-             return "<h1>Database criado com sucesso.</h1>"
+             return "<center><h1><em>Banco de Dados criado com Sucesso!!!</em></h1></center>"
           else:
              # Caso o token não seja igual, uma mensagem de erro é informado
-             return "<h1> Token para criacao do token nao confere </h1>"
+             return "<center><h1><em>Token invalido, tente novamente!!!</em></h1></center>"
+       else:
+          return "<center><h1><em>Tela de Login</em></h1></center>"
+         
 
 # Modulos
 from app import model
