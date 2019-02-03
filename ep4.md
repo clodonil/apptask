@@ -13,8 +13,8 @@ Vimos em episódios anteriores, cada módulo é um diretório criado na pasta `a
 Portanto vamos começar criando a estrutura dos módulos.
 
 ```bash
- $ mkdir app/login app/cadastro
- $ touch app/login/__init__.py app/cadastro/__init__.py
+ $ mkdir app/{login,cadastro}
+ $ touch app/{login,cadastro}/__init__.py
  $ mkdir app/templates/{login,cadastro}
 ```
 
@@ -72,7 +72,7 @@ Com os módulos apontados no arquivo [`app/__init__.py`](ep4/app/__init__.py), v
                  return "<center><h1><em>Falha ao criar a sua conta, tentnovamente!!!</em></h1></center>"
          elif request.method == "GET":     
                   return render_template('cadastro/index.html')    
-       ```
+  ```
 
    A chamada `render_template`, basicamente renderiza o template que foi definido. O nosso template [`cadastro/index.html`](ep4/app/templates/cadastro/index.html) é um html com um formulário.
 
