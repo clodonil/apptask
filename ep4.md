@@ -158,26 +158,104 @@ Com os módulos apontados no arquivo [`app/__init__.py`](ep4/app/__init__.py), v
   Para melhorar a compreensão do módulo, segue o módulo comentado.
 
   ```python
-   
+   # Importa as libs necessarias do Flask
    from flask import render_template,  Blueprint, request
+   # Importa a class People para manipular os usuarios
    from app.model  import People
    
+   # Definir o blueprint com o nome do módulo
    login = Blueprint('login',__name__)
    
+   # Define a roda dentro do blueprint, por exemplo cadastro/ ou cadastro/index
+   # Perceba que as duas rotas estao definidas
    @login.route('/index', methods=['GET','POST'])
    @login.route('/', methods=['GET','POST'])
+
+   # Metodo que vai realizar as tarefas necessárias para Autenticar o usuário
    def auth():
+       # Verifica se o request eh POST
        if request.method == "POST":
+            # Obtem os valores dos formulários e salva na variavel email/senha
             email = request.form['email']
             senha = request.form['senha']
    
+            # Pesquisa se o usuário existe no banco de dados
             user = People.query.filter_by(email=email.lower()).first()
    
-           
+            # Verifica se o usuário existe e verifica se as senhas são iguais.
             if user and user.senha == senha:
                return "<h1>Usuario Autenticado.</h1>"
             else:    
                return "<h1>Usuario ou senha errado.</h1>"
+       # Verifica se o método é GET                
        elif request.method == "GET":
+           # Renderiza o formulário        
            return render_template('login/index.html')    
   ```
+   A chamada `render_template`, basicamente renderiza o template que foi definido. O nosso template [`app/templates/login/index.html`](ep4/app/templates/login/index.html) é um html com um formulário.
+
+  ```html
+  <html>
+    <title>Criação de Usuário</title>
+    <body>
+        <center>
+        <h2> Entrar no Sistema </h2>
+        <span>
+            <form action="" method="post">
+                 <span>
+                   <label> E-mail: </label>
+                   <br>
+                   <input type="text" name="email">
+                 </span>
+                 <br>
+                 <span>
+                    <label> Senha: </label>
+                    <br>
+                    <input type="password" name="senha">
+                </span>
+                  <br><br>
+                  <input type="submit" value="Entrar">
+            </form>
+        </span>
+    </body>
+  </html>
+  ```
+Agora a nossa aplicação já tem os módulo de cadastro e autenticação. Vamos gerar uma nova imagem para validar as alterações.
+
+Lembre-se de realiar o build para essa nova imagem:
+
+```bash
+$ docker build -t apptask:latest .
+```
+
+Para externalizar a porta 8080, utilizamos o parâmetro `-p`. 
+
+```bash
+$ docker run -it -p 8080:8080 apptask
+```
+
+Agora dentro do containner vamos inicializar aplicação e acompanhar o logs.
+
+```bash
+python run.py 
+ * Running on http://0.0.0.0:8080/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 236-035-556
+```
+
+Com aplicação executando, vamos validar.
+
+Tela de registro de um novo usuário
+![form](img/ep4-img1.png)
+
+E na tela2, temos a tela e autenticação.
+
+![create_database](img/ep4-img2.png)
+
+
+Dessa forma finalizamos o episódio 4.
+
+[5. Episódio - Templates](ep5.md)
+
+
