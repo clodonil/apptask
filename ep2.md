@@ -1,6 +1,6 @@
 # 2. Episódio - Database
 
-Ao final desse episódio devemos ter um banco de dados criado e estruturado.Para chegarmos esse objetivo, vamos percorrer um curto caminho, mais com bastante informação.
+Ao final desse episódio devemos ter um banco de dados criado e estruturado. Para chegarmos esse objetivo, vamos percorrer um curto caminho, mais com bastante informação.
 
 Antes de mais nada, vamos definir a estrutura do nosso projeto. Uma das razões da escolha do `Flash` como framework de desenvolvimento web é porque ele é super flexível com relação a estruturação do projeto e você como programador tem a livre escolha.
 
@@ -62,7 +62,11 @@ Vamos começar pelo arquivo principal, que chamado de controller.
   Esse é o maior arquivo que vamos ter no projeto, portanto ao dominar esse arquivo o restante do projeto vai ser tranquilo.
   Apesar desse arquivo sem grande, é bastante simples. 
   
-  Em uma visão geral ele declara duas `class` que serão duas tabelas do banco de dados, em cada `class` declara os atributos que são os registro do banco de dados e os métodos que estaremos realizando com essa tabela, tais como adicionar registro, deletar registro, alterar registro.
+  Em uma visão geral ele declara duas `class` que serão duas tabelas do banco de dados, em cada `class` declara os atributos que são os registro do banco de dados, conforme mosta a figura abaixo.
+  
+  [!tabela_banco](img/ep2-img1.png)
+  
+  Além dos atributos dos registro da tabela, a classes também declara os métodos que estaremos realizando com essa tabela, tais como adicionar registro, deletar registro, alterar registro.
 
   Toda a mágina da transformação desse código em tabela no banco de dados fica com conta da lib `SQLAlchemy`.
 
