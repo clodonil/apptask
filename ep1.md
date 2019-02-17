@@ -6,7 +6,7 @@ O nome da nossa aplicação é `apptask`.
 
 A prototipação da aplicação é essa:
 
-Na tela1 temos a primeira execução da aplicação. Como previsto não temos um banco de dados, portanto vamos criar através da entrada de um token de segurança.
+Na tela1, temos a primeira execução da aplicação. Como previsto não temos um banco de dados, portanto vamos criar através da entrada de um token de segurança.
 
 
 ![tela_inicial](img/ep1-img1.png)
@@ -15,7 +15,12 @@ Com o banco criado, temos a tela de login, se o usuário não existir temos que 
 
 ![tela_inicial](img/ep1-img2.png)
 
-Com o usuário logado, temos as tarefas. O usuário pode criar novas tarefas, fechar a tarefa com sucesso, fechar com insucesso (não realizou), alterar a data.
+Com o usuário logado, temos as seguintes ações que o usuário pode realizar com as tarefas:
+
+- Criar novas tarefas.
+- Fechar a tarefa com sucesso;
+- Fechar com insucesso (não realizou);
+- Alterar a data.
 
 Um filtro deve ser criado para o usuário localizar as tarefas fechadas.
 
