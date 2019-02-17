@@ -64,7 +64,7 @@ Vamos começar pelo arquivo principal, que chamado de controller.
   
   Em uma visão geral ele declara duas `class` que serão duas tabelas do banco de dados, em cada `class` declara os atributos que são os registro do banco de dados, conforme mosta a figura abaixo.
   
-  ![tabela_banco](img/ep2-img1.png)
+  ![tabela_banco](img/ep2-img2.png)
   
   Além dos atributos dos registro da tabela, a classes também declara os métodos que estaremos realizando com essa tabela, tais como adicionar registro, deletar registro, alterar registro.
 
