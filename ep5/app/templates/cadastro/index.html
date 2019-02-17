@@ -1,19 +1,32 @@
 <html>
     <title>Criação de Usuário</title>
     <body>
-        <h1><center> Criação de Usuário </center></h1>
+        <center>
+        <h1> Criação de uma nova conta</h1>
+        <p><em>Preeencha o formulário para criação de um novo usuário.</em></p>
         <span>
             <form action="" method="post">
                  <span>
                    <label> E-Mail: </label>
+                   <br>
                    <input type="text" name="email">
-                </span>
+                 </span>
+                 <br>
                 <span>
-                 <label> Senha: </label>
-                 <input type="text" name="senha">
+                   <label> Senha: </label>
+                   <br>
+                   <input type="password" name="senha">
+                </span>
+                <br>
+                <span>   
+                   <label> Confirme Senha: </label>
+                   <br>
+                   <input type="password" name="confirm_senha">
                 </span> 
-		<input type="submit">
+                <br><br>
+		       <input type="submit" value="Criar Conta">
             </form>
         </span>
+        </center>
     </body>
 </html>

@@ -1,22 +1,17 @@
 <html>
     <title>Criando a database</title>
     <body>
-        <h1><center> Primeiro Acesso: Criando Banco de Dados  </center></h1>
-        {% with messages = get_flashed_messages() %}
-  {% if messages %}
-    <ul class=flashes>
-    {% for message in messages %}
-      <li>{{ message }}</li>
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endwith %}
+        <center>
+        <h1>Setup da Aplicação</h1>
+        <div>Criação do Banco de Dados</div>
+        <div><p><em>Para criação do banco de dados digite o token definido na configuração da aplicação.</em></p></div>
         <span>
             <form action="" method="post">
                 <label> Token: </label>
-                <input type="text" name="token">
-		<input type="submit">
+                <input type="text" name="token"> <br/><br/>
+		        <input type="submit">
             </form>
         </span>
+        </center>
     </body>
 </html>
