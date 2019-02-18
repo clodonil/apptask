@@ -1,24 +1,30 @@
-<html>
-    <title>Criação de Usuário</title>
-    <body>
-        <center>
-        <h2> Entrar no Sistema </h2>
-        <span>
-            <form action="" method="post">
-                 <span>
-                   <label> E-mail: </label>
-                   <br>
-                   <input type="text" name="email">
-                 </span>
-                 <br>
-                 <span>
-                    <label> Senha: </label>
-                    <br>
-                    <input type="password" name="senha">
-                </span>
-                  <br><br>
-                  <input type="submit" value="Entrar">
-            </form>
-        </span>
-    </body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+<div class="row">
+        <div class="col s12">
+           <h1 class="header center orange-text" class="center-align">Entrar no Sistema</h1>
+           <div class="center-align">Criação do Banco de Dados</div>
+        </div>
+        <div class="row" class="center-align">
+                <form action="" method="post" class="col s12">
+                   <div class="row">
+                       <div class="input-field col s12">
+                           <input placeholder="entre com o seu email" id="email" type="text" class="validate">
+                            <label for="E-mail">E-Mail</label>
+                       </div>
+                   </div>
+                   <div class="row">
+                        <div class="input-field col s12">
+                            <input placeholder="entre com a sua senha" id="senha" type="text" class="validate">
+                             <label for="senha">Senha</label>
+                        </div>
+                    </div>    
+     
+                   <div class="row">
+                      <div class="input-field col s12">
+                          <input type="submit" class="waves-effect waves-light btn">
+                      </div>
+                   </div>   
+               </form>
+        </div>
+ {% endblock %}
