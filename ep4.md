@@ -52,9 +52,8 @@ Com os módulos apontados no arquivo [`app/__init__.py`](ep4/app/__init__.py), v
 
   Explicando a lógica que utilizei para desenvolver esse módulo. Temos um método chamado `create()`, esse método pode receber os protocolos `POST` e `GET`.
 
-  Se a requisição for `GET`, o formulário é renderizado. 
-  
-  Se a requisição for `POST`, os dados de `email` e `senha` são extraidos do formulário, um novo objeto do tipo `People` é instânciada com os dados `user = People(email,senha`. E o comando `user.add(user)` faz o registro no banco de dados.
+  - Se a requisição for `GET`, o formulário é renderizado. 
+  - Se a requisição for `POST`, os dados de `email` e `senha` são extraidos do formulário, um novo objeto do tipo `People` é instânciada com os dados `user = People(email,senha`. E o comando `user.add(user)` faz o registro no banco de dados.
 
   As linhas de código estão comentados para facilitar a compreensão.
 
@@ -135,7 +134,7 @@ Com os módulos apontados no arquivo [`app/__init__.py`](ep4/app/__init__.py), v
 
 - **Login**:
 
-  Agora que já temos um usuário cadastrado, vamos criar a tela para o lógin do usuário. Portanto basicamente vamos verificar se a senha que o usuário digitou é a mesma que está gravado no banco de dados.
+  Agora que já temos um usuário cadastrado, vamos criar a tela para o lógin. Portanto basicamente vamos verificar se a senha que o usuário digitou é a mesma que está gravado no banco de dados.
 
   No arquivo [`app/login/__init__.py`](ep4/login/__init__.py) temos toda a lógica necessária para fazer o login. Seguimos a mesma lógica do registro do usuário.
 
@@ -220,7 +219,7 @@ Com os módulos apontados no arquivo [`app/__init__.py`](ep4/app/__init__.py), v
     </body>
   </html>
   ```
-Agora a nossa aplicação já tem os módulo de cadastro e autenticação. Vamos gerar uma nova imagem para validar as alterações.
+Agora a nossa aplicação já têm os módulo de cadastro e autenticação. Vamos gerar uma nova imagem para validar as alterações.
 
 Lembre-se de realiar o build para essa nova imagem:
 
@@ -257,5 +256,3 @@ E na tela2, temos a tela e autenticação.
 Dessa forma finalizamos o episódio 4.
 
 [5. Episódio - Templates](ep5.md)
-
-

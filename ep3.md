@@ -2,9 +2,9 @@
 
 Nesse e episódio vamos criar a nossa primeira interface. No episódio anterior vimos como criar o banco de dados. 
 
-Só que o nosso banco de dados deve ser criado durante a execução do programa, normalmente quando o aplicativo é executado pela primeira vez, é verificado se o banco existe, se não existir o banco é criado.
+Só que o nosso banco de dados deve ser criado durante a execução do programa, normalmente quando o aplicativo é executado pela primeira vez. O sistema deve verificar se o banco existe, se não existir ele cria.
 
-Para executarmos esse tarefa com a minima segurança, vamos definir um token no arquivo `config.py` e seo o usuário ao executar a primeira vez aplicação e o banco não existir, só deve permitir criar o banco se o usuário digitar o toke corretamente.
+Para executarmos essa tarefa com a mínima segurança, vamos definir um token no arquivo `config.py` e na primeira vez que o aplicação é executado, o usuário deve informar o token para criar o banco de dados.
 
 Vamos começar alterando o arquivo [`config.py`](ep3/config.py) adicionado a variável de token com o nome `create_db_token`.
 
@@ -16,11 +16,11 @@ create_db_token = "macacoloco"
 
 O próximo arquivo que vamos alterar é o [`app/__init__.py`](ep3/app/__init__.py). Como o arquivo teve bastante modificação, coloquei o arquivo inteiro. 
 
-Na execução do aplicação, primeiro verifica se o banco de dados não existe.
+Na execução do aplicação, primeiro verifica se o banco de dados existe.
 
 Se não existir, e o método da chamada é [GET](https://blog.alura.com.br/diferencas-entre-get-e-post/), temos a condição perfeita para abrir o formulário `settings.html` para solicitar o token para criação do banco de dados.
 
-Ao preencher o formulário e enviar através do método [POST](https://blog.alura.com.br/diferencas-entre-get-e-post/) vai ser verificado o token, se for válido, o banco de dados é criado.
+Ao preencher o formulário e enviar através do método [POST](https://blog.alura.com.br/diferencas-entre-get-e-post/) para ser verificado o token, se for válido, o banco de dados é criado.
 
 Segue o comentário do código para um melhor entendimento.
 
@@ -114,7 +114,7 @@ Para externalizar a porta 8080, utilizamos o parâmetro `-p`.
 $ docker run -it -p 8080:8080 apptask
 ```
 
-Agora dentro do containner vamos inicializar aplicação e acompanhar o logs.
+Agora dentro do container vamos inicializar aplicação e acompanhar o logs.
 
 ```bash
 python run.py 

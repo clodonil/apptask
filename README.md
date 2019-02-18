@@ -20,7 +20,7 @@ Separamos a evolução em episódios para tornar mais didática e mais simples o
 
 7. Episódio - Criação da Tela de Tasks
 
-8. Episódio - Permissão e Acessos
+8. Episódio - Permissão e Acessos com Segurança
 
 9. Episódio - CodeDeploy - AWS
 
