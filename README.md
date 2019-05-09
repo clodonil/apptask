@@ -1,4 +1,4 @@
-# Jornada do Code em Dev ao Deploy em AWS
+# Jornada do Code ao Deploy em AWS
 
 Estamos começando uma jornada que muitos desenvolvedores estão passando ou vão passar. É uma jornada fim-a-fim, começa no desenvolvimento de uma aplicação e vai até o Deploy em produção.
 
